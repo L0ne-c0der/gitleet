@@ -1,42 +1,30 @@
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
-        int n = matrix.length;
- 	    int m = matrix[0].length;
-	    List<Integer> result = new ArrayList<Integer>();
-	    List<Integer> finalResult = spiralMatrix(result, matrix, 0, 0, n, m);
-	    return finalResult;
-    }
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int x = 0;
+        int y = 0;
+        int dx = 1;
+        int dy = 0;
+        List<Integer> res = new ArrayList<>();
 
-    static List<Integer> spiralMatrix(List<Integer> arrayList,int[][] matrix,int startRow,int startCol,int endRow,int endCol){
-        if(endCol<startCol || endRow<startRow){
-            return arrayList;
-        }
-        if(endCol-startCol==1 || endRow - startRow == 1){
-            for(int i=startRow; i<endRow; i++){
-                for(int j=startCol; j<endCol; j++){
-                    arrayList.add(matrix[i][j]);
-                }
+        for (int i = 0; i < rows * cols; i++) {
+            res.add(matrix[y][x]);
+            matrix[y][x] = -101; // the range of numbers in matrix is from -100 to 100
+
+            if (!(0 <= x + dx && x + dx < cols && 0 <= y + dy && y + dy < rows) || matrix[y+dy][x+dx] == -101) {
+                //basically dx = -dy and dy = dx, whenever we go out of bounds
+                //or get duplicate (-101) positions
+                //dx is added to x, and dy added to y
+                int temp = dx;
+                dx = -dy;
+                dy = temp;
             }
-            return arrayList;
-        }
-        int i=startRow;
-        int j=startCol;
-        for(j=startCol; j<endCol-1; j++){
-            arrayList.add(matrix[i][j]);
-        }
-        for(i=startRow; i<endRow-1; i++){
-            arrayList.add(matrix[i][j]);
+
+            x += dx;
+            y += dy;
         }
 
-        for(;j>startCol;j--){ //changed to go till startCol not startCol+1
-            arrayList.add(matrix[i][j]);
-        }
-        
-        for(; i>startRow; i--){ //it changed to startRow instead of startCol
-            arrayList.add(matrix[i][j]);
-        }
-        System.out.println((startRow+1)+" "+(endRow-1));
-        System.out.println((startCol+1)+" "+(endCol-1));
-        return spiralMatrix(arrayList, matrix, startRow+1, startCol+1, endRow-1, endCol-1); //issue here, the start row is becoming greater than start col
+        return res;        
     }
 }
