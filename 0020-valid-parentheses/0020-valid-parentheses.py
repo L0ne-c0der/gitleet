@@ -1,13 +1,21 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        mapping = {")":"(", "}":"{", "]":"["}
 
         for char in s:
-            if char in mapping.values():
-                stack.append(char)
-            elif char in mapping.keys():
-                if not stack or mapping[char] != stack.pop():
-                    return False
-        
+            match char:
+                case '(' | '{' | '[':
+                    stack.append(char)
+                case ')':
+                    if not stack or stack.pop() != '(':
+                        return False
+                case '}':
+                    if not stack or stack.pop() != '{':
+                        return False
+                case ']':
+                    if not stack or stack.pop() != '[':
+                        return False
+                case _: # For any other unexpected characters, though problem constraints usually limit this
+                    return False # Or handle as per problem requirements
+
         return not stack
