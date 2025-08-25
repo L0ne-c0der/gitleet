@@ -1,14 +1,17 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        num = 0
-        for digit in digits:
-            num = num*10 + digit
-        num +=1
-        result = []
-        while num>0:
-            digit = (num % 10)
-            result.append(digit)
-            num = num//10
-        return result[::-1]
+        carry = True
+        for i in range(len(digits)-1,-1,-1):
+            if carry:
+                digits[i] = digits[i] + 1
+            if digits[i] == 10:
+                carry = True
+                digits[i] = digits[i] % 10
+            else:
+                carry = False
+        if carry:
+            return [1] + digits
+        return digits
+
             
         
