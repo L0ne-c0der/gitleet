@@ -1,13 +1,13 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        prev = []
+        prev = set()
         def _isHappy(n , prev):
             if n==1:
                 return True
             if n in prev:
                 return False
             
-            prev.append(n)
+            prev.add(n)
             sum = 0
             while n>0:
                 digit = n%10
