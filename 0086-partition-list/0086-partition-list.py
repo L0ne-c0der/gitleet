@@ -5,27 +5,31 @@
 #         self.next = next
 class Solution:
     def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
-        list1, list2 = [], []
-        temp_head = head
-        while temp_head:
-            if temp_head.val < x:
-                list1.append(temp_head.val)
+        #no need for array
+        #create two linked lists, and add low and higher values accordingly
+        #just change the routes by erasing current next
+        #no need to create new nodes
+
+        slist , blist = ListNode(), ListNode()
+        small , big = slist, blist
+
+        while head:
+            if head.val < x:
+                small.next = head
+                small = small.next
             else:
-                list2.append(temp_head.val)
-            temp_head = temp_head.next
+                big.next = head
+                big = big.next
+            
+            head = head.next
+    
+        small.next = blist.next
+        big.next = None
 
-        new_head = ListNode()
-        temp = new_head
+        return slist.next
+        
 
-        for i in list1:
-            temp.next = ListNode(i)
-            temp = temp.next
-        
-        for j in list2:
-            temp.next = ListNode(j)
-            temp = temp.next
-        
-        return new_head.next
+            
 
         
             
