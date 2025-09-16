@@ -1,25 +1,23 @@
+from collections import defaultdict
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        #create a list of dictionaries
-        #if the dictionary already present, no need
-        #else, we will add the dict, and then something
 
-        dict_list = []
-        res = []
+        #create a dictionary whose key is sorted value, and each key stores
+        #list of string that have the same ordered characters
+        #defaultdict is sub-class of dict()
+        #initializes the dict with default values for a key 
+        #based on parameter (default_factory) passed
+        #if parameter is "int": default value for every key would be 0
+        #else list: default value for every key would be []
+        #else set: def val is {}
+
+        mapp = defaultdict(list)
+
         for string in strs:
-            mapp = dict()
-            for char in string:
-                mapp[char] = mapp.get(char,0) + 1
-             
-            if mapp not in dict_list:
-                dict_list.append(mapp)
-                res.append([string])
-
-            else:
-                idx = dict_list.index(mapp)
-                res[idx].append(string)
+            key = "".join(sorted(string))
+            mapp[key].append(string)
         
-        return res
+        return list(mapp.values())
 
 
                 
