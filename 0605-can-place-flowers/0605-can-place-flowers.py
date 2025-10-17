@@ -1,15 +1,20 @@
 class Solution:
-    def canPlaceFlowers(self, flowerbed: List[int], k: int) -> bool:
+    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         
-        n = len(flowerbed)
+        flowerbed = [0] + flowerbed + [0]
 
-        for i in range(n):
-            prev = 0 if i==0 else flowerbed[i-1]
-            next = 0 if i==(n-1) else flowerbed[i+1]
+        if n==0:
+            return True
+
+        k = len(flowerbed)
+
+        for i in range(1, k-1):
+            prev = flowerbed[i-1]
+            next = flowerbed[i+1]
             if next==prev==flowerbed[i]==0:
                 flowerbed[i] = 1
-                k-=1
-            if k==0:
+                n-=1
+            if n==0:
                 return True
 
-        return k==0
+        return n==0
