@@ -12,8 +12,10 @@ class Solution:
             temp = node.left
             node.left = node.right
             node.right = temp
+            
             _invertTree(node.left)
             _invertTree(node.right)
-            return
+
         _invertTree(root)
         return root
+        
