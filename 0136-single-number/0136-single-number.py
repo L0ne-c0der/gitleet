@@ -1,6 +1,9 @@
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        sor_val = 0
-        for x in nums:
-            sor_val = sor_val ^ x
-        return sor_val
+    def singleNumber(self, arr: List[int]) -> int:
+        if len(arr) < 2:
+            return arr[0]
+
+        res = arr[0]
+        for i in range(1, len(arr)):
+            res = res ^ arr[i]
+        return res
