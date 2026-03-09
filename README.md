@@ -16,4 +16,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0125-valid-palindrome](https://github.com/L0ne-c0der/gitleet/tree/main/0125-valid-palindrome/) | Easy |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0136-single-number](https://github.com/L0ne-c0der/gitleet/tree/main/0136-single-number/) | Easy |
+## Bit Manipulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0136-single-number](https://github.com/L0ne-c0der/gitleet/tree/main/0136-single-number/) | Easy |
 <!---LeetCode Topics End-->
