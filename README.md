@@ -21,6 +21,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0136-single-number](https://github.com/L0ne-c0der/gitleet/tree/main/0136-single-number/) | Easy |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
+| [2521-distinct-prime-factors-of-product-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/2521-distinct-prime-factors-of-product-of-array/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -29,8 +30,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
+| [2521-distinct-prime-factors-of-product-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/2521-distinct-prime-factors-of-product-of-array/) | Medium |
 ## Number Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
+| [2521-distinct-prime-factors-of-product-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/2521-distinct-prime-factors-of-product-of-array/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2521-distinct-prime-factors-of-product-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/2521-distinct-prime-factors-of-product-of-array/) | Medium |
 <!---LeetCode Topics End-->
