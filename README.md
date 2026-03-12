@@ -20,6 +20,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0136-single-number](https://github.com/L0ne-c0der/gitleet/tree/main/0136-single-number/) | Easy |
+| [1909-remove-one-element-to-make-the-array-strictly-increasing](https://github.com/L0ne-c0der/gitleet/tree/main/1909-remove-one-element-to-make-the-array-strictly-increasing/) | Easy |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
 | [2521-distinct-prime-factors-of-product-of-array](https://github.com/L0ne-c0der/gitleet/tree/main/2521-distinct-prime-factors-of-product-of-array/) | Medium |
 ## Bit Manipulation
